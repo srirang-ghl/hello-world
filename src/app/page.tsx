@@ -44,12 +44,12 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen p-6 flex flex-col items-center justify-center gap-8">
+    <main className="min-h-screen p-6 flex flex-col items-center justify-center">
       <h1 className="text-3xl font-bold text-center mb-4">
         How are you feeling?
       </h1>
 
-      <div className="relative flex flex-row items-center justify-center gap-4 flex-wrap">
+      <div className="relative flex flex-row items-center justify-center gap-4 flex-wrap mb-2">
         <Sprite
           srcBase="/sprites/lyra"
           variant={isTalking ? 'talk' : 'idle'}
@@ -57,7 +57,9 @@ export default function Home() {
         <MessageBubble message={message} />
       </div>
 
-      <MoodButtons onPick={handleMoodPick} />
+      <div className="mt-6" style={{ marginTop: '50px' }}>
+        <MoodButtons onPick={handleMoodPick} />
+      </div>
     </main>
   );
 }

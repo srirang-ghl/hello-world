@@ -7,7 +7,7 @@ export function MessageBubble({ message }: MessageBubbleProps) {
     <div
       role="status"
       aria-live="polite"
-      className="message-bubble chat-bubble"
+      className="message-bubble chat-bubble animate-bob"
       style={{
         position: 'relative',
         backgroundColor: 'white',
@@ -15,7 +15,7 @@ export function MessageBubble({ message }: MessageBubbleProps) {
         padding: '16px 20px',
         maxWidth: '320px',
         boxShadow: '0 4px 16px rgba(0, 0, 0, 0.15)',
-        animation: 'pop-in 0.3s ease-out forwards',
+        animation: 'pop-in 0.3s ease-out forwards, bob 4s ease-in-out 0.3s infinite',
       }}
     >
       <p style={{ margin: 0, fontSize: '16px', lineHeight: '1.5', color: '#333' }}>{message}</p>

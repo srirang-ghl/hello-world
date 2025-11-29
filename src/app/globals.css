@@ -17,8 +17,17 @@ body {
   100% { transform: scale(1); opacity: 1; }
 }
 
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
 .animate-pop-in {
   animation: pop-in 0.3s ease-out forwards;
+}
+
+.animate-bob {
+  animation: bob 3s ease-in-out infinite;
 }
 
 .sprite-container {
