@@ -45,15 +45,19 @@ export default function Home() {
 
   return (
     <main className="min-h-screen p-6 flex flex-col items-center justify-center">
-      <h1 className="text-3xl font-bold text-center mb-4">
-        How are you feeling?
+      <h1 className="text-3xl font-bold text-center">
+        Helpful Buddy Box
       </h1>
+      <p className="text-center text-gray-500 mb-4">We are here to help you feel better.</p>
 
-      <div className="relative flex flex-row items-center justify-center gap-4 flex-wrap mb-2">
-        <Sprite
-          srcBase="/sprites/lyra"
-          variant={isTalking ? 'talk' : 'idle'}
-        />
+      <div className="relative flex flex-col sm:flex-row items-center justify-center gap-4 mb-2 pb-2">
+        <div className="flex flex-col items-center">
+          <h2 className="text-xl font-semibold mb-2 text-gray-700">Lyra</h2>
+          <Sprite
+            srcBase="/sprites/lyra"
+            variant={isTalking ? 'talk' : 'idle'}
+          />
+        </div>
         <MessageBubble message={message} />
       </div>
 
