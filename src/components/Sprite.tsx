@@ -13,44 +13,83 @@ export function Sprite({
   size = 100,
   images,
 }: SpriteProps) {
-  // Default image list if not provided - tries common names
-  const defaultImages = ['idle.png', 'talk.png', 'frame1.png', 'frame2.png', 'frame3.png', 'frame4.png', 'frame5.png'];
-  const imageList = images || defaultImages;
-
   const [currentImageIndex, setCurrentImageIndex] = useState(0); // Index in existingImages array
   const [imageStates, setImageStates] = useState<Record<string, boolean>>({});
   const [existingImages, setExistingImages] = useState<string[]>([]);
 
-  // Check which images exist
+  // Generate list of potential image names to check
+  const generateImageList = (): string[] => {
+    if (images) return images;
+
+    const imageList: string[] = [];
+
+    // Common names
+    imageList.push('idle.png', 'talk.png');
+
+    // Numbered patterns: 1.png, 2.png, etc. (up to 50)
+    for (let i = 1; i <= 50; i++) {
+      imageList.push(`${i}.png`);
+    }
+
+    // Frame patterns: frame1.png, frame2.png, etc. (up to 50)
+    for (let i = 1; i <= 50; i++) {
+      imageList.push(`frame${i}.png`);
+    }
+
+    return imageList;
+  };
+
+  // Check which images exist by attempting to load them
   useEffect(() => {
     const checkImages = async () => {
       const states: Record<string, boolean> = {};
+      const imageList = generateImageList();
+      const foundImages: string[] = [];
 
-      for (const imageName of imageList) {
-        const img = new Image();
-        const imagePath = `${srcBase}/${imageName}`;
+      // Check images in parallel batches to speed up discovery
+      const batchSize = 10;
+      for (let i = 0; i < imageList.length; i += batchSize) {
+        const batch = imageList.slice(i, i + batchSize);
+        const promises = batch.map(imageName => {
+          return new Promise<{ name: string; exists: boolean }>((resolve) => {
+            const img = new Image();
+            const imagePath = `${srcBase}/${imageName}`;
 
-        await new Promise<void>((resolve) => {
-          img.onload = () => {
-            states[imageName] = true;
-            resolve();
-          };
-          img.onerror = () => {
-            states[imageName] = false;
-            resolve();
-          };
-          img.src = imagePath;
+            img.onload = () => {
+              states[imageName] = true;
+              foundImages.push(imageName);
+              resolve({ name: imageName, exists: true });
+            };
+            img.onerror = () => {
+              states[imageName] = false;
+              resolve({ name: imageName, exists: false });
+            };
+            img.src = imagePath;
+          });
         });
+
+        await Promise.all(promises);
+
+        // If we found images in this batch, continue; otherwise we might stop early
+        // But let's check all to be thorough
       }
 
+      // Sort found images: common names first, then numbered
+      foundImages.sort((a, b) => {
+        const aIsCommon = a === 'idle.png' || a === 'talk.png';
+        const bIsCommon = b === 'idle.png' || b === 'talk.png';
+        if (aIsCommon && !bIsCommon) return -1;
+        if (!aIsCommon && bIsCommon) return 1;
+        return a.localeCompare(b);
+      });
+
       setImageStates(states);
-      const existing = imageList.filter(img => states[img]);
-      setExistingImages(existing);
+      setExistingImages(foundImages);
       setCurrentImageIndex(0); // Reset to first image
     };
 
     checkImages();
-  }, [srcBase, imageList.join(',')]);
+  }, [srcBase, images?.join(',')]);
 
   // Cycle through all existing images every 3 seconds total
   useEffect(() => {
