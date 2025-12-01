@@ -90,8 +90,8 @@ export default function Home() {
 
   return (
     <main className="min-h-screen p-6 flex flex-col items-center justify-center">
-      <h1 className="text-3xl font-bold text-center">
-        Helpful Buddy Box
+      <h1 className="fancy-title text-4xl sm:text-5xl font-light text-center mb-2">
+        My Helpful Voices Within
       </h1>
       <p className="text-center text-gray-500 mb-4">We are here to help you feel better.</p>
 

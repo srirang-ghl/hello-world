@@ -2,149 +2,149 @@ import { Mood } from "@/types/mood";
 
 type CharacterId = 'lyra' | 'vermione' | 'beach-sis' | 'captain-marvellous' | 'loanna' | 'polaf';
 
+
 const messages: Record<CharacterId, Record<Mood, string[]>> = {
   lyra: {
     scared: [
-      "Take a deep breath with me. You're safe right now 💛",
-      "I'm here with you, and this feeling will pass",
-      "You're braver than you know, and that's a fact!",
-      "Let's focus on what's real right here, right now",
-      "Your feelings are valid, and you're handling them well",
-      "Remember: you've got through every scary moment before",
-      "We can take this one tiny step at a time",
-      "You're not alone in feeling this way, I promise",
-      "Your strength is still there, even when you're scared",
-      "This moment is temporary, and you are so resilient",
-      "Let's ground ourselves together - feel your feet on the floor",
-      "You've got this, and I'm right here with you"
+      "I know it feels like the storm is closing in, but breathe with me. Let the fear pass like snowflakes melting on warm hands.",
+      "Even when everything feels frozen, your heart is stronger than the cold around you.",
+      "Come closer. You’re safe here—nothing icy is going to take you.",
+      "Let the fear go, just a little. You don’t have to face it alone.",
+      "Storms look big until you take one calm breath. Start with that."
     ],
     tired: [
-      "Rest is not lazy - it's essential and you deserve it",
-      "Your body is telling you something - it's okay to listen",
-      "Take that break, the world can wait a moment",
-      "Being tired means you've been showing up - that's brave",
-      "Small steps still move us forward, rest when you need",
-      "Your worth isn't measured by your productivity",
-      "Sometimes the bravest thing is taking care of yourself",
-      "Rest now, recharge, return stronger when you're ready",
-      "It's okay to take things slower today",
-      "Your energy is precious - protect it without guilt",
-      "Even the sun sets to rest - you can too",
-      "Honor your needs - tiredness is a valid feeling"
+      "Rest, love. Even winter pauses to let the world breathe.",
+      "You don’t have to be strong every moment—let the weight fall for now.",
+      "Close your eyes. Feel the warmth slowly return to you.",
+      "The world can wait. Your heart needs quiet more than anything right now.",
+      "Let yourself melt into rest. There’s no pressure here."
     ],
     down: [
-      "These feelings are real, and they won't last forever",
-      "You matter so much, even on the harder days",
-      "It's okay to not be okay sometimes - I'm here",
-      "Your feelings are valid, no matter what they are",
-      "Small victories count - you're doing better than you think",
-      "This is just a chapter, not your whole story",
-      "The world is better with you in it, truly",
-      "It's okay to take this one moment at a time",
-      "You've made it through every hard day so far - 100% success rate!",
-      "Your feelings are weather - they change, they pass",
-      "I believe in you, especially when it's tough to believe in yourself",
-      "You're not alone in this, even when it feels that way"
+      "Some days feel like endless winter, but warmth always returns. Always.",
+      "You’re allowed to feel low. I’m not going anywhere.",
+      "Even when your world feels silent and cold, your light is still there.",
+      "It’s okay if today feels heavy. Take my hand—we’ll walk slowly.",
+      "Your heart has survived every winter so far. It’ll survive this one too."
     ]
   },
+
   vermione: {
     scared: [
-      "Hey, I see you're feeling scared. That's completely okay 💜",
-      "Let's breathe together - in and out, slowly",
-      "You're stronger than this fear, I know it",
-      "I'm right here with you, you're not facing this alone",
-      "These scary feelings will pass, they always do",
-      "You've handled tough moments before - you can do this",
-      "Let's take it one breath at a time, together",
-      "Your courage is still there, even when it's hard to feel",
-      "This feeling is temporary, and you are so capable",
-      "We can get through this moment, step by step",
-      "You're safe here, and I'm not going anywhere",
-      "Remember your strength - it's still there, I promise"
+      "Hey, breathe. Fear is just a thought—we can analyze it together.",
+      "You’re not facing this alone. We’ll take it one logical step at a time.",
+      "You’ve handled scarier things than this with far less preparation.",
+      "It’s okay to feel frightened, but remember how capable you really are.",
+      "Hold on. Let’s break this down gently, one calming breath at a time."
     ],
     tired: [
-      "You deserve rest, no questions asked 💜",
-      "Listen to what your body needs - it knows best",
-      "Taking a break isn't giving up, it's being smart",
-      "You've been working hard - rest is your right",
-      "It's okay to slow down and recharge",
-      "Your value isn't tied to how much you do",
-      "Resting is an act of self-care, not laziness",
-      "Take the time you need - you'll come back stronger",
-      "There's no shame in needing to rest",
-      "Your energy is valuable - use it wisely",
-      "Even the strongest need to rest sometimes",
-      "Honor your body's need for rest - it's valid"
+      "You’ve been carrying so much. Let your mind rest for a moment.",
+      "Even the brightest mind needs quiet. Close your eyes for a bit.",
+      "You’re allowed to stop and breathe. You don’t have to prove anything.",
+      "Rest now. You can pick this up later with a clearer head.",
+      "Sit with me for a moment. Your body is asking for care, not criticism."
     ],
     down: [
-      "I see you're feeling down, and that's okay 💜",
-      "These feelings won't last forever, I promise",
-      "You matter, even when it doesn't feel like it",
-      "It's okay to not be okay - I'm here for you",
-      "You're doing better than you think, really",
-      "This is just one moment in your story",
-      "The world needs you here, I mean that",
-      "Take it one moment at a time, that's enough",
-      "You've survived every bad day so far - that's amazing",
-      "Feelings come and go, like clouds in the sky",
-      "I believe in you, even when you can't believe in yourself",
-      "You're not alone, even when it feels that way"
+      "You’re not alone, even if your thoughts are heavy right now.",
+      "Feeling low doesn’t make you weak—it makes you human.",
+      "You’ve gotten through every dark moment before. You will again.",
+      "Let’s take this slowly. There’s no rush to feel better instantly.",
+      "You matter more than your mind is letting you believe right now."
     ]
   },
+
   'beach-sis': {
     scared: [
-      "Hey, I'm here with you! Let's ride this wave together 🌊",
-      "Take a moment, breathe with the ocean rhythm - you've got this"
+      "Hey babe… breathe with me. Imagine the tide washing the fear away.",
+      "You’re safe. Hold onto me a sec—we’ll ride this wave together.",
+      "Fear is just a splash. Stay close, it’ll pass quicker than you think.",
+      "You’re not alone, okay? I’ve got you through this little storm.",
+      "Let’s slow down. Inhale like the ocean. Exhale like the calm shore."
     ],
     tired: [
-      "Rest is like the tide - it comes and goes, and that's natural 🌊",
-      "You've been swimming hard - time to float and recharge"
+      "Girl, you’ve been swimming nonstop. Float for a bit—you deserve it.",
+      "Let the tide slow. You don’t have to keep pushing right now.",
+      "Take a breath and let your shoulders drop. Rest is part of the rhythm.",
+      "Come sit with me. The ocean can wait for you.",
+      "Even the strongest waves pull back to recharge. You can too."
     ],
     down: [
-      "Even the ocean has calm days - this feeling will pass 🌊",
-      "You're like a wave - you'll rise again, I promise"
+      "Low tide moments don’t last. You’ll rise again, I promise.",
+      "Come here—let me remind you that you’re still glowing, even today.",
+      "It’s okay to feel like you’re sinking a bit. I’m right here.",
+      "The ocean always calms. Your heart will too, just give it a moment.",
+      "You don’t have to smile right now. Just lean on me."
     ]
   },
+
   'captain-marvellous': {
     scared: [
-      "Ahoy! Every great captain faces storms - you'll navigate through this ⚓",
-      "Steady as she goes! You're braver than you think, sailor"
+      "Hey, it’s okay. Fear doesn’t mean you’re weak—it means you’re human.",
+      "I’m right here. You’re not facing this mission alone.",
+      "You’re stronger than the panic in your chest. Breathe—steady, soldier.",
+      "Courage doesn’t show up before the fear. It shows up during it.",
+      "Whatever you’re facing, you don’t have to do it alone."
     ],
     tired: [
-      "Even the best captains need to drop anchor and rest ⚓",
-      "You've been sailing hard - time to dock and recharge, captain"
+      "Even heroes need to power down. Rest—you’ve earned it.",
+      "Take a break, captain. The galaxy isn’t going anywhere.",
+      "You don’t always need to push through. Sometimes retreat brings strength.",
+      "Lie back for a moment. Your energy matters too.",
+      "Powering up starts with slowing down. Let your body reset."
     ],
     down: [
-      "Rough seas don't last forever - smoother waters ahead, I promise ⚓",
-      "You're a strong captain - you've weathered storms before, you'll weather this one too"
+      "Even the strongest fall sometimes. What matters is you’re still here.",
+      "You don’t need to be a hero right now—just be you.",
+      "You’re not alone in this fight. I’m right beside you.",
+      "Bad days don’t define your worth. They never will.",
+      "Lean on me until your strength returns. I’m not going anywhere."
     ]
   },
+
   loanna: {
     scared: [
-      "I see you're feeling scared - that's completely valid, and I'm here 💙",
-      "Let's take this together, one step at a time. You're not alone"
+      "Hey… look at me. Your courage runs deeper than this fear.",
+      "You’re not alone. I’m right here in the canoe with you.",
+      "This moment feels big, but your spirit is bigger.",
+      "Take a breath. Let the ocean inside you calm again.",
+      "Every voyage has scary moments. You’re still steering—beautifully."
     ],
     tired: [
-      "Your body knows what it needs - rest is not a weakness, it's wisdom 💙",
-      "It's okay to pause and recharge - you'll come back even stronger"
+      "Rest your paddle for a bit. You’ve traveled far.",
+      "You don’t have to keep moving right now. The ocean can wait.",
+      "It’s okay to pause. Even the stars rest behind clouds sometimes.",
+      "Sit with me—we’ll breathe with the waves for a moment.",
+      "Your journey is long, but there’s no rush. Let yourself slow down."
     ],
     down: [
-      "These feelings are real, and they're also temporary - this will pass 💙",
-      "You matter, and you're doing better than you think. I believe in you"
+      "Some waves hit harder, but they don’t take you under.",
+      "You matter, even on the days you feel lost at sea.",
+      "Your heart is stronger than you think. I believe in it.",
+      "This is just one part of your voyage—not the whole story.",
+      "You’re not drifting alone. I’m right here beside you."
     ]
   },
+
   polaf: {
     scared: [
-      "Hey, feeling scared is okay - let's face this together ❄️",
-      "You're stronger than this fear. Take a deep breath - we'll get through this"
+      "Hey! Deep breath. Big warm hug incoming—I’m not going anywhere!",
+      "It’s okay to feel scared. I get scared too… usually of pointy things!",
+      "Hold on to me. Fear melts when we face it together.",
+      "You’re safe. Nothing chilly is going to bother you right now.",
+      "Let’s take one teeny tiny calm breath at a time, okay?"
     ],
     tired: [
-      "Rest is essential, like the quiet after a snowstorm ❄️",
-      "You've been working hard - time to rest and let yourself recharge"
+      "Whew! Even snow need snoozes! Let’s take a tiny break together.",
+      "You’ve done so much—time for a soft, cozy rest.",
+      "Being tired is okay. Let’s just… flump. Yes. Flump right here.",
+      "Let your body relax like fresh snow on the ground.",
+      "You deserve a warm moment of stillness, my friend."
     ],
     down: [
-      "Even the coldest days end - warmth always returns ❄️",
-      "You're going through a tough time, but you're not alone. This feeling will pass"
+      "Hey… I’m right here. Even cold days warm up eventually.",
+      "You’re not alone. I have so many hugs saved just for you.",
+      "It’s okay to have a melty heart sometimes. Feelings are normal!",
+      "This heavy moment won’t last. Warmth always returns.",
+      "You’re wonderful, even on your down days. Truly wonderful."
     ]
   }
 };

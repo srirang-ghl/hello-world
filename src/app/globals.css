@@ -35,6 +35,15 @@ body {
   animation: bob 3s ease-in-out infinite;
 }
 
+.fancy-title {
+  font-family: var(--font-comfortaa), sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: #2d3748;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
+  line-height: 1.3;
+}
+
 .sprite-container {
   backface-visibility: hidden;
   transform: translateZ(0);
